@@ -11,4 +11,12 @@ fn main() {
 
     println!("{:?}", b1.is_empty());
     println!();
+
+    println!();
+    let mut b2 = Basket::new(17);
+    println!("{:?}", b2.get());
+
+    println!();
+    let mut b3 = Basket::new(false);
+    println!("{:?}", b3.get());
 }

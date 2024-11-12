@@ -1,19 +1,19 @@
-pub struct Basket {
-    pub item: Option<String>,
+pub struct Basket<T> {
+    pub item: Option<T>,
 }
 
-impl Basket {
-    pub fn new(item: String) -> Self {
+impl<T> Basket<T> {
+    pub fn new(item: T) -> Self {
         Basket {
             item: Some(item)
         }
     }
 
-    pub fn get (&mut self) -> Option<String> {
+    pub fn get (&mut self) -> Option<T> {
         self.item.take()
     }
 
-    pub fn put(&mut self, item: String) {
+    pub fn put(&mut self, item: T) {
         self.item = Some(item);
     }
 
