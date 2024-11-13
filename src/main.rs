@@ -1,7 +1,15 @@
 mod basket;
+mod stack;
+
 use basket::Basket;
+use stack::Stack;
 
 fn main() {
+    do_basket();
+    do_stack();
+}
+
+fn do_basket() {
     println!();
     let mut b1 = Basket::new(String::from("Casey"));
     println!("{:?}", b1.get());
@@ -19,4 +27,8 @@ fn main() {
     println!();
     let mut b3 = Basket::new(false);
     println!("{:?}", b3.get());
+}
+
+fn do_stack() {
+    let s1 = Stack::new(vec![String::from("Casey Bo Trent")]);
 }
